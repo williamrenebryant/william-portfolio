@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(export PATH=\"/opt/homebrew/bin:$PATH\")",
+      "Bash(npm audit fix:*)",
+      "Bash(npm run dev:*)"
+    ]
+  }
+}
