@@ -63,7 +63,7 @@ export default function ResumePage() {
           <div className="mt-6 md:mt-8">
             <button
               onClick={() => window.print()}
-              className="inline-block px-6 py-2 md:px-8 md:py-3 bg-accent-orange text-bg-primary font-semibold rounded-lg hover:bg-accent-orange/80 transition-colors text-sm md:text-base"
+              className="inline-block px-6 py-2 md:px-8 md:py-3 border border-[rgba(232,224,214,0.2)] text-text-primary font-normal rounded-lg hover:border-[rgba(232,224,214,0.5)] hover:bg-[rgba(232,224,214,0.05)] transition-colors text-sm md:text-base"
             >
               Download Resume (PDF)
             </button>
@@ -87,7 +87,7 @@ export default function ResumePage() {
                 <a
                   href={`/images/Headshot${num}.jpg`}
                   download={`William-Bryant-Headshot-${num}.jpg`}
-                  className="absolute bottom-4 right-4 p-3 bg-accent-orange text-bg-primary rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 hover:bg-accent-orange/80 z-10"
+                  className="absolute bottom-4 right-4 p-3 bg-[rgba(12,10,9,0.8)] border border-[rgba(232,224,214,0.3)] text-text-primary rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 hover:bg-[rgba(232,224,214,0.1)] z-10"
                   title="Download Headshot"
                 >
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -207,29 +207,45 @@ export default function ResumePage() {
             </table>
           </div>
 
-          {/* Mobile Card Layout - Scrollable */}
-          <div className="md:hidden max-h-[60vh] overflow-y-auto space-y-3 pr-2">
+          {/* Mobile List Layout */}
+          <div className="md:hidden flex flex-col max-h-[60vh] overflow-y-auto pr-2">
             {credits.map((credit) => (
               <div
                 key={credit.id}
-                className={`bg-bg-secondary/20 rounded-lg p-4 border-l-4 ${
-                  credit.featured ? 'border-accent-orange' : 'border-bg-secondary'
-                }`}
+                className="flex flex-col py-4 gap-1"
+                style={{ borderBottom: '1px solid var(--color-border)' }}
               >
-                <h3 className="text-lg font-semibold text-text-primary mb-2">
-                  {credit.title}
-                </h3>
-                <div className="space-y-1 text-sm">
-                  <p className="text-text-muted">
-                    <span className="text-accent-orange font-medium">Role:</span> {credit.role}
-                  </p>
-                  <p className="text-text-muted">
-                    <span className="text-accent-orange font-medium">Company:</span> {credit.company}
-                  </p>
-                  <p className="text-text-muted">
-                    <span className="text-accent-orange font-medium">Date:</span> {credit.date}
-                  </p>
+                <div className="flex items-baseline gap-3">
+                  <div
+                    className="flex-shrink-0 rounded-full"
+                    style={{
+                      width: '8px',
+                      height: '8px',
+                      background: credit.type === 'musical' ? '#C41E3A' : credit.type === 'opera' ? '#8B6D47' : '#4A6741',
+                      marginTop: '4px',
+                    }}
+                  />
+                  <div>
+                    <h3
+                      className="font-normal m-0"
+                      style={{ fontSize: 'clamp(18px, 3vw, 24px)', color: 'var(--color-text)' }}
+                    >
+                      {credit.title}
+                    </h3>
+                    <span
+                      className="block text-[13px] tracking-[2px] uppercase font-normal mt-1"
+                      style={{ color: 'var(--color-text-subtle)' }}
+                    >
+                      {credit.role}
+                    </span>
+                  </div>
                 </div>
+                <span
+                  className="text-sm font-normal tracking-wide ml-5"
+                  style={{ color: 'var(--color-text-muted)' }}
+                >
+                  {credit.company} · {credit.date}
+                </span>
               </div>
             ))}
           </div>
@@ -438,7 +454,7 @@ export default function ResumePage() {
           <div className="text-center mt-8">
             <button
               onClick={() => window.print()}
-              className="px-8 py-3 bg-accent-orange text-bg-primary font-semibold rounded-lg hover:bg-accent-orange/80 transition-colors"
+              className="px-8 py-3 border border-[rgba(232,224,214,0.2)] text-text-primary font-normal rounded-lg hover:border-[rgba(232,224,214,0.5)] hover:bg-[rgba(232,224,214,0.05)] transition-colors"
             >
               Print / Save as PDF
             </button>

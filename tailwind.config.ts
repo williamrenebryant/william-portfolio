@@ -10,8 +10,8 @@ const config: Config = {
     extend: {
       colors: {
         'dark-primary': '#0C0A09',
-        'accent-orange': '#e85d00',
-        'accent-orange-dark': '#b44300',
+        'accent-orange': '#c4501a',
+        'accent-orange-dark': '#8b3a15',
         'teal-dark': '#052626',
         'teal-mid': '#073838',
         'teal-light': '#094a4a',
