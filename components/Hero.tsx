@@ -29,11 +29,11 @@ export default function Hero() {
       <div
         className="absolute pointer-events-none hidden md:block"
         style={{
-          opacity: loaded ? 0.12 : 0,
+          opacity: loaded ? 0.4 : 0,
           transition: 'opacity 4s ease 1.2s',
           top: '10%',
           right: '5%',
-          width: 'clamp(300px, 30vw, 480px)',
+          width: 'clamp(400px, 45vw, 650px)',
           height: 'auto',
         }}
       >
