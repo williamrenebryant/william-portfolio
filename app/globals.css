@@ -2,16 +2,33 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --color-bg: #0C0A09;
+  --color-text: #e8e0d6;
+  --color-text-muted: rgba(232, 224, 214, 0.4);
+  --color-text-subtle: rgba(232, 224, 214, 0.3);
+  --color-border: rgba(232, 224, 214, 0.06);
+  --color-accent: rgba(139, 109, 71, 0.3);
+  --font-display: var(--font-cormorant), 'Cormorant Garamond', serif;
+}
+
 html {
   scroll-behavior: smooth;
 }
 
 body {
-  font-family: 'Helvetica Neue', Arial, sans-serif;
-  background: #000000;
-  color: #e0e0e0;
+  font-family: var(--font-display);
+  background: var(--color-bg);
+  color: var(--color-text);
   line-height: 1.6;
   position: relative;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background: var(--color-accent);
+  color: var(--color-text);
 }
 
 /* Black sidebars to block glow outside 1280px */
@@ -23,7 +40,7 @@ body::after {
   bottom: 0;
   width: calc(50% - 640px);
   min-width: 0;
-  background: #000000;
+  background: var(--color-bg);
   z-index: 50;
   pointer-events: none;
 }
@@ -140,7 +157,7 @@ body::after {
     201px -56px rgba(255,255,255,0.2), -289px -134px rgba(255,255,255,0.18),
     156px 178px rgba(255,255,255,0.22), -23px -145px rgba(255,255,255,0.2),
     312px 201px rgba(255,255,255,0.18), -145px -312px rgba(255,255,255,0.22);
-  animation: twinkle-xs 2.5s ease-in-out infinite;
+  animation: twinkle-xs 5s ease-in-out infinite;
 }
 
 /* Dust pattern B (1.5px, alternate offsets) */
@@ -166,7 +183,7 @@ body::after {
     134px -134px rgba(255,255,255,0.22), -78px 301px rgba(255,255,255,0.18),
     189px -89px rgba(255,255,255,0.22), -267px -56px rgba(255,255,255,0.2),
     34px 178px rgba(255,255,255,0.18), 312px -223px rgba(255,255,255,0.22);
-  animation: twinkle-xs 2.8s ease-in-out infinite;
+  animation: twinkle-xs 5.6s ease-in-out infinite;
   animation-delay: -1.2s;
 }
 
@@ -188,7 +205,7 @@ body::after {
     -145px 201px rgba(255,255,255,0.45), 267px 134px rgba(255,255,255,0.5),
     -56px -178px rgba(255,255,255,0.45), 178px 56px rgba(255,255,255,0.5),
     -201px 289px rgba(255,255,255,0.45), 45px -267px rgba(255,255,255,0.5);
-  animation: twinkle-md 4s ease-in-out infinite;
+  animation: twinkle-md 8s ease-in-out infinite;
 }
 
 /* Star pattern B (3px, alternate) */
@@ -209,7 +226,7 @@ body::after {
     -112px -289px rgba(255,255,255,0.5), 245px 189px rgba(255,255,255,0.45),
     -189px 34px rgba(255,255,255,0.5), 56px -145px rgba(255,255,255,0.45),
     212px -89px rgba(255,255,255,0.5), -278px 234px rgba(255,255,255,0.45);
-  animation: twinkle-md 3.5s ease-in-out infinite;
+  animation: twinkle-md 7s ease-in-out infinite;
   animation-delay: -1.8s;
 }
 
@@ -227,7 +244,7 @@ body::after {
     -201px 156px rgba(200,220,255,0.7), 89px -189px rgba(255,240,220,0.65),
     -178px -201px rgba(255,255,255,0.7), 145px 267px rgba(200,220,255,0.65),
     234px -178px rgba(255,240,220,0.7), -267px 89px rgba(255,255,255,0.65);
-  animation: twinkle-lg 3.5s ease-in-out infinite;
+  animation: twinkle-lg 7s ease-in-out infinite;
 }
 
 /* Bright pattern B (4.5px, alternate) */
@@ -244,7 +261,7 @@ body::after {
     -234px 78px rgba(255,255,255,0.7), 56px -234px rgba(255,240,220,0.65),
     201px 145px rgba(200,220,255,0.7), -145px 267px rgba(255,255,255,0.65),
     178px -201px rgba(255,240,220,0.7), -289px -45px rgba(200,220,255,0.65);
-  animation: twinkle-lg 4s ease-in-out infinite;
+  animation: twinkle-lg 8s ease-in-out infinite;
   animation-delay: -2s;
 }
 
@@ -259,7 +276,7 @@ body::after {
   box-shadow:
     -45px 89px rgba(255,255,255,0.8), 178px -134px rgba(200,220,255,0.75),
     -201px -45px rgba(255,240,220,0.8);
-  animation: twinkle-xl 5s ease-in-out infinite;
+  animation: twinkle-xl 10s ease-in-out infinite;
 }
 
 .sc-feature-alt {
@@ -272,7 +289,7 @@ body::after {
   box-shadow:
     112px 56px rgba(200,220,255,0.8), -156px 178px rgba(255,255,255,0.75),
     67px -201px rgba(255,240,220,0.8);
-  animation: twinkle-xl 4.5s ease-in-out infinite;
+  animation: twinkle-xl 9s ease-in-out infinite;
   animation-delay: -2.5s;
 }
 
@@ -292,7 +309,7 @@ body::after {
     680px 1350px rgba(255,255,255,0.15), 420px 1100px rgba(255,255,255,0.12),
     950px 200px rgba(255,255,255,0.15), 1100px 1300px rgba(255,255,255,0.12),
     300px 950px rgba(255,255,255,0.15), 750px 50px rgba(255,255,255,0.12);
-  animation: twinkle-sm 5s ease-in-out infinite;
+  animation: twinkle-sm 10s ease-in-out infinite;
 }
 
 /* Nebula dust - subtle cosmic clouds */
@@ -556,6 +573,7 @@ body::after {
 
   /* Reset and constrain body */
   html, body {
+    font-family: 'Helvetica Neue', Arial, sans-serif !important;
     margin: 0 !important;
     padding: 0 !important;
     background: white !important;
@@ -615,4 +633,9 @@ body::after {
     -webkit-print-color-adjust: exact !important;
     print-color-adjust: exact !important;
   }
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 0.8; }
 }

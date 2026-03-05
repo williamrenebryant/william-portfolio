@@ -62,7 +62,7 @@ export default function Contact() {
         <div className="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto">
           {/* Contact Form */}
           <div className="bg-bg-secondary/20 rounded-lg p-6 md:p-8">
-            <h3 className="text-2xl font-light mb-6 text-accent-orange">Send a Message</h3>
+            <h3 className="text-2xl font-light mb-6 text-text-primary">Send a Message</h3>
             <form onSubmit={handleSubmit} className="space-y-4">
               <div>
                 <label htmlFor="name" className="block text-sm font-medium text-text-muted mb-2">
@@ -136,7 +136,7 @@ export default function Contact() {
           {/* Contact Info & Social Links */}
           <div>
             <div className="bg-bg-secondary/20 rounded-lg p-6 md:p-8 mb-6">
-              <h3 className="text-2xl font-light mb-6 text-accent-orange">Contact Information</h3>
+              <h3 className="text-2xl font-light mb-6 text-text-primary">Contact Information</h3>
               <div className="space-y-4">
                 <div>
                   <p className="text-sm font-medium text-text-muted mb-1">Email</p>
@@ -153,7 +153,7 @@ export default function Contact() {
             {/* Social Media Links */}
             {socialLinks.length > 0 && (
               <div className="bg-bg-secondary/20 rounded-lg p-6 md:p-8">
-                <h3 className="text-2xl font-light mb-6 text-accent-orange">Connect</h3>
+                <h3 className="text-2xl font-light mb-6 text-text-primary">Connect</h3>
                 <div className="flex flex-wrap gap-4">
                   {socialLinks.map((social) => (
                     <a

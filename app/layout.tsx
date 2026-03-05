@@ -1,7 +1,16 @@
 import type { Metadata } from 'next'
+import { Cormorant_Garamond } from 'next/font/google'
 import './globals.css'
 import Header from '@/components/Header'
+import GrainOverlay from '@/components/GrainOverlay'
 import Script from 'next/script'
+
+const cormorant = Cormorant_Garamond({
+  subsets: ['latin'],
+  weight: ['300', '400', '500'],
+  style: ['normal', 'italic'],
+  variable: '--font-cormorant',
+})
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://williamrenebryant.com'),
@@ -58,7 +67,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className="scroll-smooth">
+    <html lang="en" className={`scroll-smooth ${cormorant.variable}`}>
       <head>
         {/* Google Analytics - Replace G-BY2T6S7Q3J with your actual ID */}
         <Script
@@ -136,6 +145,7 @@ export default function RootLayout({
           <div className="dynamic-bg-orb-3" />
           <div className="dynamic-bg-orb-4" />
         </div>
+        <GrainOverlay />
         <Header />
         <div className="relative z-[1]">
           {children}

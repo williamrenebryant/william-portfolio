@@ -29,7 +29,7 @@ export default function ReelPage() {
       <div className="max-w-[1280px] mx-auto px-8">
         {/* Header */}
         <div className="text-center mb-12 md:mb-16">
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-light mb-4 text-accent-orange tracking-wider">
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-light mb-4 text-text-primary tracking-wider">
             DEMO REELS
           </h1>
           <p className="text-text-muted text-lg">
@@ -42,7 +42,7 @@ export default function ReelPage() {
           {videos.map((video, index) => (
             <div key={video.id} className="max-w-5xl mx-auto">
               {/* Video Title */}
-              <h2 className="text-2xl md:text-3xl font-light mb-4 text-accent-orange text-center md:text-left">
+              <h2 className="text-2xl md:text-3xl font-light mb-4 text-text-primary text-center md:text-left">
                 {video.title}
               </h2>
 

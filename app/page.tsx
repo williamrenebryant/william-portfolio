@@ -1,41 +1,55 @@
 import Hero from '@/components/Hero'
-import Gallery from '@/components/Gallery'
+import CreditsList from '@/components/CreditsList'
 import About from '@/components/About'
 import Contact from '@/components/Contact'
 import { performances } from '@/data/performances'
 import { designs } from '@/data/designs'
 import { visuals } from '@/data/visuals'
 
+const performanceCredits = performances.filter(p => !('placeholder' in p && p.placeholder)).map(p => ({
+  title: p.title,
+  date: p.description,
+  note: p.role,
+  color: '#C41E3A',
+  href: `/performance/${p.id}`,
+}))
+
+const designCredits = designs.map(d => ({
+  title: d.title,
+  date: d.date,
+  note: d.description || undefined,
+  color: '#8B6D47',
+  href: `/design/${d.id}`,
+}))
+
+const visualCredits = visuals.map(v => ({
+  title: v.title,
+  date: v.description,
+  color: '#4A6741',
+}))
+
 export default function Home() {
   return (
     <main>
       <Hero />
 
-      {/* Performance Section */}
-      <section id="performance" className="py-20 md:py-40 px-8 max-w-[1280px] mx-auto">
-        <h2 className="text-4xl md:text-5xl font-light mb-4 text-center tracking-[0.2rem] text-text-primary">
-          PERFORMANCE
-        </h2>
-        <p className="text-center text-text-muted mb-8">Click to view gallery</p>
-        <Gallery items={performances} type="performance" />
-      </section>
+      <CreditsList
+        sectionId="performance"
+        sectionTitle="Performance"
+        items={performanceCredits}
+      />
 
-      {/* Design Section */}
-      <section id="design" className="py-20 md:py-40 px-8 max-w-[1280px] mx-auto">
-        <h2 className="text-4xl md:text-5xl font-light mb-4 text-center tracking-[0.2rem] text-text-primary">
-          DESIGN
-        </h2>
-        <p className="text-center text-text-muted mb-8">Click to view gallery</p>
-        <Gallery items={designs} type="design" />
-      </section>
+      <CreditsList
+        sectionId="design"
+        sectionTitle="Design"
+        items={designCredits}
+      />
 
-      {/* Visuals Section */}
-      <section id="visuals" className="py-20 md:py-40 px-8 max-w-[1280px] mx-auto">
-        <h2 className="text-4xl md:text-5xl font-light mb-4 text-center tracking-[0.2rem] text-text-primary">
-          VISUALS
-        </h2>
-        <Gallery items={visuals} type="visual" />
-      </section>
+      <CreditsList
+        sectionId="visuals"
+        sectionTitle="Visuals"
+        items={visualCredits}
+      />
 
       <About />
       <Contact />

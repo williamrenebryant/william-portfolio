@@ -33,7 +33,7 @@ export default function ResumePage() {
       <div className="max-w-[1280px] mx-auto px-8">
         {/* Header */}
         <div className="text-center mb-12 md:mb-16">
-          <h1 className="text-3xl md:text-5xl lg:text-7xl font-light mb-4 md:mb-6 text-accent-orange tracking-wider">
+          <h1 className="text-3xl md:text-5xl lg:text-7xl font-light mb-4 md:mb-6 text-text-primary tracking-wider">
             WILLIAM RENÉ BRYANT
           </h1>
 
@@ -101,7 +101,7 @@ export default function ResumePage() {
 
         {/* Featured Productions */}
         <section className="mb-12 md:mb-16">
-          <h2 className="text-2xl md:text-3xl lg:text-4xl font-light mb-6 md:mb-8 text-accent-orange text-center">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-light mb-6 md:mb-8 text-text-primary text-center">
             Featured Productions
           </h2>
 
@@ -174,7 +174,7 @@ export default function ResumePage() {
 
         {/* Full Credits Table */}
         <section className="mb-12 md:mb-16">
-          <h2 className="text-2xl md:text-3xl lg:text-4xl font-light mb-6 md:mb-8 text-accent-orange text-center">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-light mb-6 md:mb-8 text-text-primary text-center">
             Theatre Credits
           </h2>
 
@@ -183,10 +183,10 @@ export default function ResumePage() {
             <table className="w-full text-left border-collapse">
               <thead>
                 <tr className="border-b border-accent-orange/30">
-                  <th className="py-3 px-4 text-accent-orange font-semibold">Production</th>
-                  <th className="py-3 px-4 text-accent-orange font-semibold">Role</th>
-                  <th className="py-3 px-4 text-accent-orange font-semibold">Company</th>
-                  <th className="py-3 px-4 text-accent-orange font-semibold">Date</th>
+                  <th className="py-3 px-4 text-text-primary font-semibold">Production</th>
+                  <th className="py-3 px-4 text-text-primary font-semibold">Role</th>
+                  <th className="py-3 px-4 text-text-primary font-semibold">Company</th>
+                  <th className="py-3 px-4 text-text-primary font-semibold">Date</th>
                 </tr>
               </thead>
               <tbody>
@@ -239,13 +239,13 @@ export default function ResumePage() {
         <section className="mb-12 md:mb-16">
           {/* Desktop: Always expanded */}
           <div className="hidden md:block">
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-light mb-6 md:mb-8 text-accent-orange text-center">
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-light mb-6 md:mb-8 text-text-primary text-center">
               Training & Education
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
               {training.map((section) => (
                 <div key={section.category} className="bg-bg-secondary/20 rounded-lg p-4 md:p-6">
-                  <h3 className="text-lg md:text-xl font-semibold mb-2 md:mb-3 text-accent-orange">
+                  <h3 className="text-lg md:text-xl font-semibold mb-2 md:mb-3 text-text-primary">
                     {section.category}
                   </h3>
                   <ul className="space-y-2">
@@ -266,7 +266,7 @@ export default function ResumePage() {
               onClick={() => toggleSection('training')}
               className="w-full flex items-center justify-between p-4 bg-bg-secondary/20 rounded-lg mb-4"
             >
-              <h2 className="text-2xl font-light text-accent-orange">
+              <h2 className="text-2xl font-light text-text-primary">
                 Training & Education
               </h2>
               <svg
@@ -284,7 +284,7 @@ export default function ResumePage() {
               <div className="space-y-4 mb-4">
                 {training.map((section) => (
                   <div key={section.category} className="bg-bg-secondary/20 rounded-lg p-4">
-                    <h3 className="text-lg font-semibold mb-2 text-accent-orange">
+                    <h3 className="text-lg font-semibold mb-2 text-text-primary">
                       {section.category}
                     </h3>
                     <ul className="space-y-2">
@@ -305,13 +305,13 @@ export default function ResumePage() {
         <section className="mb-12 md:mb-16">
           {/* Desktop: Always expanded */}
           <div className="hidden md:block">
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-light mb-6 md:mb-8 text-accent-orange text-center">
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-light mb-6 md:mb-8 text-text-primary text-center">
               Skills
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
               {Object.entries(skills).map(([category, items]) => (
                 <div key={category} className="bg-bg-secondary/20 rounded-lg p-4 md:p-6">
-                  <h3 className="text-base md:text-lg font-semibold mb-2 md:mb-3 text-accent-orange">
+                  <h3 className="text-base md:text-lg font-semibold mb-2 md:mb-3 text-text-primary">
                     {category}
                   </h3>
                   <div className="flex flex-wrap gap-2">
@@ -335,7 +335,7 @@ export default function ResumePage() {
               onClick={() => toggleSection('skills')}
               className="w-full flex items-center justify-between p-4 bg-bg-secondary/20 rounded-lg mb-4"
             >
-              <h2 className="text-2xl font-light text-accent-orange">
+              <h2 className="text-2xl font-light text-text-primary">
                 Skills
               </h2>
               <svg
@@ -353,7 +353,7 @@ export default function ResumePage() {
               <div className="space-y-4 mb-4">
                 {Object.entries(skills).map(([category, items]) => (
                   <div key={category} className="bg-bg-secondary/20 rounded-lg p-4">
-                    <h3 className="text-base font-semibold mb-2 text-accent-orange">
+                    <h3 className="text-base font-semibold mb-2 text-text-primary">
                       {category}
                     </h3>
                     <div className="flex flex-wrap gap-2">
@@ -375,7 +375,7 @@ export default function ResumePage() {
 
         {/* Print-Friendly Resume - Hidden on Mobile */}
         <section id="print-resume" className="hidden md:block mb-16 bg-bg-secondary/20 rounded-lg p-8">
-          <h2 className="text-3xl md:text-4xl font-light mb-8 text-accent-orange text-center">
+          <h2 className="text-3xl md:text-4xl font-light mb-8 text-text-primary text-center">
             Resume
           </h2>
           <div className="max-w-4xl mx-auto bg-white text-black p-12 rounded-lg shadow-2xl">

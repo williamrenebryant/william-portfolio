@@ -65,7 +65,7 @@ export default async function DesignPage({ params }: Props) {
         </Link>
 
         {/* Title */}
-        <h1 className="text-4xl md:text-6xl font-light mb-4 text-accent-orange text-center">
+        <h1 className="text-4xl md:text-6xl font-light mb-4 text-text-primary text-center">
           {project.title}
         </h1>
 
