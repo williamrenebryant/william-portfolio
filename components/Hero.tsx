@@ -25,6 +25,22 @@ export default function Hero() {
         }}
       />
 
+      {/* Cicada illustration - subtle background element */}
+      <div
+        className="absolute pointer-events-none"
+        style={{
+          opacity: loaded ? 0.04 : 0,
+          transition: 'opacity 3s ease 0.8s',
+          top: '50%',
+          left: '50%',
+          transform: 'translate(-50%, -50%)',
+          width: 'clamp(280px, 40vw, 500px)',
+          height: 'auto',
+        }}
+      >
+        <img src="/images/cicada.svg" alt="" className="w-full h-full" />
+      </div>
+
       <div
         className="text-center px-6"
         style={{
@@ -52,12 +68,13 @@ export default function Hero() {
           style={{
             opacity: loaded ? 0.5 : 0,
             transition: 'opacity 1.4s ease 0.3s',
+            fontStyle: 'italic',
           }}
         >
           {['Performance', 'Design', 'Visuals'].map((label) => (
             <span
               key={label}
-              className="text-[13px] md:text-[17px] tracking-[2px] md:tracking-[4px] uppercase font-normal"
+              className="text-[13px] md:text-[17px] tracking-[2px] md:tracking-[4px] font-light"
             >
               {label}
             </span>

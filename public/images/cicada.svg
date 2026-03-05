@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 340" fill="none" stroke="#e8e0d6" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+  <!-- Body -->
+  <ellipse cx="100" cy="200" rx="28" ry="65" opacity="0.9"/>
+
+  <!-- Head -->
+  <ellipse cx="100" cy="125" rx="22" ry="18"/>
+
+  <!-- Compound eyes -->
+  <ellipse cx="82" cy="120" rx="10" ry="8" stroke-width="1"/>
+  <ellipse cx="118" cy="120" rx="10" ry="8" stroke-width="1"/>
+
+  <!-- Ocelli (simple eyes) -->
+  <circle cx="93" cy="112" r="2" fill="#e8e0d6" stroke="none" opacity="0.5"/>
+  <circle cx="100" cy="109" r="2" fill="#e8e0d6" stroke="none" opacity="0.5"/>
+  <circle cx="107" cy="112" r="2" fill="#e8e0d6" stroke="none" opacity="0.5"/>
+
+  <!-- Proboscis -->
+  <line x1="100" y1="133" x2="100" y2="155" stroke-width="0.8" opacity="0.6"/>
+
+  <!-- Pronotum (thorax plate) -->
+  <path d="M72 140 Q100 132 128 140 Q130 155 100 160 Q70 155 72 140Z" stroke-width="1"/>
+
+  <!-- Mesonotum -->
+  <path d="M75 158 Q100 152 125 158 L120 175 Q100 180 80 175Z" stroke-width="1"/>
+
+  <!-- Wing veins - Left forewing -->
+  <path d="M75 160 Q30 120 15 80 Q12 50 25 30 Q55 15 80 45 Q90 70 85 155" stroke-width="0.8" opacity="0.7"/>
+  <!-- Left wing venation -->
+  <path d="M75 160 Q45 130 30 85" stroke-width="0.5" opacity="0.4"/>
+  <path d="M80 150 Q55 115 35 70" stroke-width="0.5" opacity="0.4"/>
+  <path d="M82 142 Q60 105 42 55" stroke-width="0.5" opacity="0.4"/>
+  <path d="M30 85 Q50 75 70 100" stroke-width="0.5" opacity="0.3"/>
+  <path d="M25 60 Q45 55 65 80" stroke-width="0.5" opacity="0.3"/>
+  <!-- Left wing cells -->
+  <path d="M20 45 Q40 40 60 65" stroke-width="0.4" opacity="0.25"/>
+
+  <!-- Wing veins - Right forewing -->
+  <path d="M125 160 Q170 120 185 80 Q188 50 175 30 Q145 15 120 45 Q110 70 115 155" stroke-width="0.8" opacity="0.7"/>
+  <!-- Right wing venation -->
+  <path d="M125 160 Q155 130 170 85" stroke-width="0.5" opacity="0.4"/>
+  <path d="M120 150 Q145 115 165 70" stroke-width="0.5" opacity="0.4"/>
+  <path d="M118 142 Q140 105 158 55" stroke-width="0.5" opacity="0.4"/>
+  <path d="M170 85 Q150 75 130 100" stroke-width="0.5" opacity="0.3"/>
+  <path d="M175 60 Q155 55 135 80" stroke-width="0.5" opacity="0.3"/>
+  <!-- Right wing cells -->
+  <path d="M180 45 Q160 40 140 65" stroke-width="0.4" opacity="0.25"/>
+
+  <!-- Left hindwing -->
+  <path d="M78 170 Q45 180 30 210 Q28 235 45 245 Q65 248 78 225" stroke-width="0.8" opacity="0.5"/>
+  <path d="M78 170 Q50 195 38 220" stroke-width="0.4" opacity="0.3"/>
+  <path d="M78 180 Q55 200 42 230" stroke-width="0.4" opacity="0.3"/>
+
+  <!-- Right hindwing -->
+  <path d="M122 170 Q155 180 170 210 Q172 235 155 245 Q135 248 122 225" stroke-width="0.8" opacity="0.5"/>
+  <path d="M122 170 Q150 195 162 220" stroke-width="0.4" opacity="0.3"/>
+  <path d="M122 180 Q145 200 158 230" stroke-width="0.4" opacity="0.3"/>
+
+  <!-- Legs - front pair -->
+  <path d="M80 148 L55 160 L40 180" stroke-width="0.8" opacity="0.6"/>
+  <path d="M120 148 L145 160 L160 180" stroke-width="0.8" opacity="0.6"/>
+
+  <!-- Legs - middle pair -->
+  <path d="M78 170 L50 190 L38 215" stroke-width="0.8" opacity="0.6"/>
+  <path d="M122 170 L150 190 L162 215" stroke-width="0.8" opacity="0.6"/>
+
+  <!-- Legs - rear pair -->
+  <path d="M80 195 L55 220 L45 250" stroke-width="0.8" opacity="0.6"/>
+  <path d="M120 195 L145 220 L155 250" stroke-width="0.8" opacity="0.6"/>
+
+  <!-- Leg segments (tarsi) -->
+  <path d="M40 180 L35 185" stroke-width="0.6" opacity="0.5"/>
+  <path d="M160 180 L165 185" stroke-width="0.6" opacity="0.5"/>
+  <path d="M38 215 L33 220" stroke-width="0.6" opacity="0.5"/>
+  <path d="M162 215 L167 220" stroke-width="0.6" opacity="0.5"/>
+  <path d="M45 250 L40 256" stroke-width="0.6" opacity="0.5"/>
+  <path d="M155 250 L160 256" stroke-width="0.6" opacity="0.5"/>
+
+  <!-- Abdomen segments -->
+  <path d="M72 195 Q100 192 128 195" stroke-width="0.5" opacity="0.4"/>
+  <path d="M73 210 Q100 207 127 210" stroke-width="0.5" opacity="0.4"/>
+  <path d="M74 225 Q100 222 126 225" stroke-width="0.5" opacity="0.4"/>
+  <path d="M76 240 Q100 237 124 240" stroke-width="0.5" opacity="0.4"/>
+  <path d="M80 252 Q100 250 120 252" stroke-width="0.5" opacity="0.4"/>
+
+  <!-- Tymbal (sound organ) marks -->
+  <ellipse cx="78" cy="185" rx="5" ry="8" stroke-width="0.5" opacity="0.35"/>
+  <ellipse cx="122" cy="185" rx="5" ry="8" stroke-width="0.5" opacity="0.35"/>
+
+  <!-- Antennae -->
+  <path d="M88 115 Q80 100 75 90 Q72 82 74 75" stroke-width="0.7" opacity="0.6"/>
+  <path d="M112 115 Q120 100 125 90 Q128 82 126 75" stroke-width="0.7" opacity="0.6"/>
+</svg>
