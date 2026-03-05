@@ -24,7 +24,7 @@ export default function CreditsList({ sectionId, sectionTitle, items }: CreditsL
   return (
     <section id={sectionId} className="py-20 md:py-32 px-6 md:px-10 max-w-[1200px] mx-auto">
       {/* Section header */}
-      <div className="mb-16">
+      <div className="mb-10 md:mb-16">
         <span
           className="block text-[15px] tracking-[6px] uppercase font-medium mb-3"
           style={{ color: 'var(--color-text-subtle)' }}
@@ -44,7 +44,7 @@ export default function CreditsList({ sectionId, sectionTitle, items }: CreditsL
         {items.map((item, idx) => {
           const inner = (
             <div
-              className="grid items-baseline py-5"
+              className="flex flex-col md:grid md:items-baseline py-4 md:py-5 gap-1 md:gap-0"
               style={{
                 gridTemplateColumns: '1fr auto',
                 borderBottom: '1px solid var(--color-border)',
@@ -54,7 +54,7 @@ export default function CreditsList({ sectionId, sectionTitle, items }: CreditsL
               onMouseEnter={() => setHoveredIdx(idx)}
               onMouseLeave={() => setHoveredIdx(null)}
             >
-              <div className="flex items-baseline gap-4">
+              <div className="flex items-baseline gap-3 md:gap-4">
                 {/* Color dot */}
                 <div
                   className="flex-shrink-0 rounded-full"
@@ -67,28 +67,30 @@ export default function CreditsList({ sectionId, sectionTitle, items }: CreditsL
                     marginTop: '4px',
                   }}
                 />
-                <h3
-                  className="font-normal m-0"
-                  style={{
-                    fontSize: 'clamp(20px, 3vw, 32px)',
-                    transition: 'transform 0.4s cubic-bezier(0.22, 1, 0.36, 1)',
-                    transform: hoveredIdx === idx ? 'translateX(12px)' : 'translateX(0)',
-                    color: 'var(--color-text)',
-                  }}
-                >
-                  {item.title}
+                <div>
+                  <h3
+                    className="font-normal m-0"
+                    style={{
+                      fontSize: 'clamp(18px, 3vw, 32px)',
+                      transition: 'transform 0.4s cubic-bezier(0.22, 1, 0.36, 1)',
+                      transform: hoveredIdx === idx ? 'translateX(12px)' : 'translateX(0)',
+                      color: 'var(--color-text)',
+                    }}
+                  >
+                    {item.title}
+                  </h3>
                   {item.note && (
                     <span
-                      className="ml-4 text-[16px] tracking-[2px] uppercase font-normal"
+                      className="block md:inline md:ml-4 text-[13px] md:text-[16px] tracking-[2px] uppercase font-normal mt-1 md:mt-0"
                       style={{ color: 'var(--color-text-subtle)' }}
                     >
                       {item.note}
                     </span>
                   )}
-                </h3>
+                </div>
               </div>
               <span
-                className="text-lg font-normal tracking-wide"
+                className="text-sm md:text-lg font-normal tracking-wide ml-5 md:ml-0"
                 style={{ color: 'var(--color-text-muted)' }}
               >
                 {item.date}

@@ -26,7 +26,7 @@ export default function Hero() {
       />
 
       <div
-        className="text-center px-8"
+        className="text-center px-6"
         style={{
           transform: loaded ? 'translateY(0)' : 'translateY(30px)',
           opacity: loaded ? 1 : 0,
@@ -48,7 +48,7 @@ export default function Hero() {
         </h1>
 
         <div
-          className="flex gap-10 justify-center mt-8"
+          className="flex gap-4 md:gap-10 justify-center mt-6 md:mt-8"
           style={{
             opacity: loaded ? 0.5 : 0,
             transition: 'opacity 1.4s ease 0.3s',
@@ -57,7 +57,7 @@ export default function Hero() {
           {['Performance', 'Design', 'Visuals'].map((label) => (
             <span
               key={label}
-              className="text-[17px] tracking-[4px] uppercase font-normal"
+              className="text-[13px] md:text-[17px] tracking-[2px] md:tracking-[4px] uppercase font-normal"
             >
               {label}
             </span>
