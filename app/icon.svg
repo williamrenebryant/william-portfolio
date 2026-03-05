@@ -1,8 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-  <rect width="32" height="32" rx="4" fill="#0C0A09"/>
-  <g transform="translate(6 3) scale(0.1)" fill="none" stroke="#e8e0d6" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none">
+  <g transform="translate(5 2) scale(0.095)" stroke="#e8e0d6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
     <!-- Body -->
-    <ellipse cx="100" cy="200" rx="28" ry="65" opacity="0.9"/>
+    <ellipse cx="100" cy="200" rx="28" ry="65"/>
     <!-- Head -->
     <ellipse cx="100" cy="125" rx="22" ry="18"/>
     <!-- Eyes -->
@@ -13,10 +12,13 @@
     <!-- Right forewing -->
     <path d="M125 160 Q170 120 185 80 Q188 50 175 30 Q145 15 120 45 Q110 70 115 155"/>
     <!-- Left hindwing -->
-    <path d="M78 170 Q45 180 30 210 Q28 235 45 245 Q65 248 78 225" opacity="0.6"/>
+    <path d="M78 170 Q45 180 30 210 Q28 235 45 245 Q65 248 78 225" opacity="0.7"/>
     <!-- Right hindwing -->
-    <path d="M122 170 Q155 180 170 210 Q172 235 155 245 Q135 248 122 225" opacity="0.6"/>
+    <path d="M122 170 Q155 180 170 210 Q172 235 155 245 Q135 248 122 225" opacity="0.7"/>
     <!-- Thorax -->
     <path d="M72 140 Q100 132 128 140 Q130 155 100 160 Q70 155 72 140Z"/>
+    <!-- Antennae -->
+    <path d="M88 115 Q80 100 75 90 Q72 82 74 75"/>
+    <path d="M112 115 Q120 100 125 90 Q128 82 126 75"/>
   </g>
 </svg>

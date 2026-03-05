@@ -25,20 +25,19 @@ export default function Hero() {
         }}
       />
 
-      {/* Cicada illustration - subtle background element */}
+      {/* Cicada constellation - off to the right side -->*/}
       <div
-        className="absolute pointer-events-none"
+        className="absolute pointer-events-none hidden md:block"
         style={{
-          opacity: loaded ? 0.04 : 0,
-          transition: 'opacity 3s ease 0.8s',
-          top: '50%',
-          left: '50%',
-          transform: 'translate(-50%, -50%)',
-          width: 'clamp(280px, 40vw, 500px)',
+          opacity: loaded ? 0.12 : 0,
+          transition: 'opacity 4s ease 1.2s',
+          top: '10%',
+          right: '5%',
+          width: 'clamp(300px, 30vw, 480px)',
           height: 'auto',
         }}
       >
-        <img src="/images/cicada.svg" alt="" className="w-full h-full" />
+        <img src="/images/cicada-constellation.svg" alt="" className="w-full h-full" />
       </div>
 
       <div

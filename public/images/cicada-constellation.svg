@@ -1,0 +1,119 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 500" fill="none">
+  <!-- Cicada in 3/4 isometric view, rendered as constellation points and lines -->
+  <g stroke="#e8e0d6" stroke-linecap="round" stroke-linejoin="round">
+
+    <!-- Wing - far side (behind body, more transparent) -->
+    <path d="M280 160 Q220 100 200 60 Q195 30 215 15 Q250 5 280 50 Q290 80 288 150"
+      stroke-width="0.6" opacity="0.3"/>
+    <!-- Far wing venation -->
+    <path d="M280 150 Q240 105 215 55" stroke-width="0.4" opacity="0.2"/>
+    <path d="M283 140 Q248 100 225 45" stroke-width="0.4" opacity="0.15"/>
+
+    <!-- Far hindwing -->
+    <path d="M278 180 Q245 190 230 220 Q228 245 245 255 Q265 258 278 235"
+      stroke-width="0.5" opacity="0.2"/>
+
+    <!-- Body - elongated, angled -->
+    <path d="M300 130 Q310 155 315 190 Q320 230 318 270 Q315 310 305 340 Q295 360 285 365 Q275 360 270 340 Q265 310 268 270 Q270 230 278 190 Q283 155 290 130Z"
+      stroke-width="0.8" opacity="0.7"/>
+
+    <!-- Head - angled slightly -->
+    <path d="M290 130 Q285 115 288 105 Q295 92 305 92 Q315 95 318 105 Q320 115 315 130"
+      stroke-width="0.8" opacity="0.7"/>
+
+    <!-- Near eye (larger, facing viewer) -->
+    <ellipse cx="310" cy="108" rx="9" ry="7" stroke-width="0.7" opacity="0.6"/>
+    <!-- Far eye (smaller, perspective) -->
+    <ellipse cx="292" cy="110" rx="6" ry="5.5" stroke-width="0.6" opacity="0.4"/>
+
+    <!-- Thorax plate -->
+    <path d="M285 130 Q298 125 318 132 Q320 145 300 152 Q280 147 285 130Z"
+      stroke-width="0.7" opacity="0.6"/>
+
+    <!-- Wing - near side (in front, detailed) -->
+    <path d="M318 155 Q390 110 420 65 Q430 30 415 12 Q385 0 355 35 Q335 65 320 148"
+      stroke-width="0.8" opacity="0.5"/>
+    <!-- Near wing venation -->
+    <path d="M318 150 Q370 108 405 55" stroke-width="0.5" opacity="0.3"/>
+    <path d="M319 140 Q365 100 395 45" stroke-width="0.5" opacity="0.25"/>
+    <path d="M320 130 Q358 92 385 35" stroke-width="0.4" opacity="0.2"/>
+    <!-- Cross veins -->
+    <path d="M375 75 Q360 80 345 100" stroke-width="0.4" opacity="0.15"/>
+    <path d="M400 50 Q385 58 365 78" stroke-width="0.4" opacity="0.15"/>
+
+    <!-- Near hindwing -->
+    <path d="M316 180 Q355 188 375 215 Q380 240 365 255 Q345 260 325 238"
+      stroke-width="0.6" opacity="0.35"/>
+    <path d="M320 185 Q350 200 368 228" stroke-width="0.4" opacity="0.2"/>
+
+    <!-- Abdomen segments -->
+    <path d="M272 200 Q295 195 320 200" stroke-width="0.4" opacity="0.3"/>
+    <path d="M270 225 Q293 220 318 225" stroke-width="0.4" opacity="0.3"/>
+    <path d="M270 250 Q292 245 316 250" stroke-width="0.4" opacity="0.25"/>
+    <path d="M272 275 Q291 270 314 275" stroke-width="0.4" opacity="0.25"/>
+    <path d="M275 300 Q290 296 310 300" stroke-width="0.4" opacity="0.2"/>
+    <path d="M280 320 Q290 317 305 320" stroke-width="0.4" opacity="0.2"/>
+
+    <!-- Legs - near side (visible) -->
+    <path d="M315 148 L340 160 L355 180" stroke-width="0.6" opacity="0.4"/>
+    <path d="M318 172 L345 190 L360 215" stroke-width="0.6" opacity="0.4"/>
+    <path d="M315 200 L340 225 L350 255" stroke-width="0.6" opacity="0.4"/>
+
+    <!-- Legs - far side (faint) -->
+    <path d="M283 150 L265 162 L255 178" stroke-width="0.5" opacity="0.2"/>
+    <path d="M278 175 L260 192 L252 212" stroke-width="0.5" opacity="0.2"/>
+    <path d="M275 202 L258 225 L250 248" stroke-width="0.5" opacity="0.2"/>
+
+    <!-- Antennae -->
+    <path d="M295 100 Q288 85 285 72 Q284 62 287 55" stroke-width="0.6" opacity="0.5"/>
+    <path d="M310 98 Q315 82 320 70 Q324 60 322 52" stroke-width="0.6" opacity="0.5"/>
+
+    <!-- === CONSTELLATION STARS (dots at key points) === -->
+    <!-- Wing tips and joints -->
+    <circle cx="415" cy="12" r="2" fill="#e8e0d6" opacity="0.8"/>
+    <circle cx="200" cy="60" r="1.5" fill="#e8e0d6" opacity="0.5"/>
+    <circle cx="215" cy="15" r="1.5" fill="#e8e0d6" opacity="0.5"/>
+    <circle cx="420" cy="65" r="1.5" fill="#e8e0d6" opacity="0.6"/>
+
+    <!-- Head stars -->
+    <circle cx="305" cy="92" r="1.5" fill="#e8e0d6" opacity="0.7"/>
+    <circle cx="288" cy="105" r="1" fill="#e8e0d6" opacity="0.5"/>
+
+    <!-- Antenna tips -->
+    <circle cx="287" cy="55" r="1.5" fill="#e8e0d6" opacity="0.6"/>
+    <circle cx="322" cy="52" r="1.5" fill="#e8e0d6" opacity="0.6"/>
+
+    <!-- Body points -->
+    <circle cx="305" cy="340" r="1.5" fill="#e8e0d6" opacity="0.5"/>
+    <circle cx="285" cy="365" r="2" fill="#e8e0d6" opacity="0.6"/>
+
+    <!-- Wing joint stars -->
+    <circle cx="318" cy="155" r="1.5" fill="#e8e0d6" opacity="0.6"/>
+    <circle cx="280" cy="160" r="1" fill="#e8e0d6" opacity="0.4"/>
+
+    <!-- Hindwing tips -->
+    <circle cx="375" cy="215" r="1.5" fill="#e8e0d6" opacity="0.5"/>
+    <circle cx="365" cy="255" r="1.5" fill="#e8e0d6" opacity="0.5"/>
+    <circle cx="230" cy="220" r="1" fill="#e8e0d6" opacity="0.3"/>
+    <circle cx="245" cy="255" r="1" fill="#e8e0d6" opacity="0.3"/>
+
+    <!-- Leg tips -->
+    <circle cx="355" cy="180" r="1" fill="#e8e0d6" opacity="0.4"/>
+    <circle cx="360" cy="215" r="1" fill="#e8e0d6" opacity="0.4"/>
+    <circle cx="350" cy="255" r="1.5" fill="#e8e0d6" opacity="0.5"/>
+    <circle cx="255" cy="178" r="0.8" fill="#e8e0d6" opacity="0.25"/>
+    <circle cx="250" cy="248" r="0.8" fill="#e8e0d6" opacity="0.25"/>
+
+    <!-- Scattered ambient stars around the cicada -->
+    <circle cx="450" cy="40" r="0.8" fill="#e8e0d6" opacity="0.2"/>
+    <circle cx="180" cy="35" r="0.8" fill="#e8e0d6" opacity="0.15"/>
+    <circle cx="440" cy="140" r="0.6" fill="#e8e0d6" opacity="0.15"/>
+    <circle cx="160" cy="150" r="0.6" fill="#e8e0d6" opacity="0.1"/>
+    <circle cx="400" cy="300" r="0.7" fill="#e8e0d6" opacity="0.12"/>
+    <circle cx="220" cy="320" r="0.7" fill="#e8e0d6" opacity="0.1"/>
+    <circle cx="380" cy="380" r="0.6" fill="#e8e0d6" opacity="0.1"/>
+    <circle cx="340" cy="420" r="0.5" fill="#e8e0d6" opacity="0.08"/>
+    <circle cx="470" cy="95" r="0.5" fill="#e8e0d6" opacity="0.12"/>
+    <circle cx="150" cy="90" r="0.5" fill="#e8e0d6" opacity="0.08"/>
+  </g>
+</svg>
