@@ -21,7 +21,6 @@ body {
   background: var(--color-bg);
   color: var(--color-text);
   line-height: 1.6;
-  position: relative;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -31,27 +30,7 @@ body {
   color: var(--color-text);
 }
 
-/* Black sidebars to block glow outside 1280px */
-body::before,
-body::after {
-  content: '';
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  width: calc(50% - 640px);
-  min-width: 0;
-  background: var(--color-bg);
-  z-index: 50;
-  pointer-events: none;
-}
 
-body::before {
-  left: 0;
-}
-
-body::after {
-  right: 0;
-}
 
 /* Dynamic animated background */
 .dynamic-bg {
