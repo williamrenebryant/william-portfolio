@@ -25,18 +25,18 @@ export default function CreditsList({ sectionId, sectionTitle, items }: CreditsL
     <section id={sectionId} className="py-20 md:py-32 px-6 md:px-10 max-w-[1200px] mx-auto">
       {/* Section header */}
       <div className="mb-10 md:mb-16">
-        <span
-          className="block text-[15px] tracking-[6px] uppercase font-medium mb-3"
-          style={{ color: 'var(--color-text-subtle)' }}
-        >
-          Selected Work
-        </span>
         <h2
           className="font-light leading-tight"
           style={{ fontSize: 'clamp(36px, 5vw, 60px)', color: 'var(--color-text)' }}
         >
           {sectionTitle}
         </h2>
+        <span
+          className="block text-[15px] tracking-[6px] uppercase font-medium mt-3"
+          style={{ color: 'var(--color-text-subtle)' }}
+        >
+          Selected Work
+        </span>
       </div>
 
       {/* Credits list */}
