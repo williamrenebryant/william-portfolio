@@ -312,6 +312,7 @@ export const resumeStats = {
   voice: 'Tenor',
   phone: '(302) 750-7574',
   email: 'william.rene.bryant@gmail.com',
+  website: 'williamrene.com',
   union: 'Non-union',
 }
 

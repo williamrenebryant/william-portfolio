@@ -458,6 +458,8 @@ export default function ResumePage() {
                 <span>|</span>
                 <span>{resumeStats.email}</span>
                 <span>|</span>
+                <span>{resumeStats.website}</span>
+                <span>|</span>
                 <span>{resumeStats.union}</span>
               </div>
               <div className="text-xs text-gray-600 mt-1">
