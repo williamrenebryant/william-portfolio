@@ -6,6 +6,7 @@ export interface Credit {
   date: string
   type: 'musical' | 'play' | 'opera'
   featured?: boolean
+  upcoming?: boolean
   images?: string[]
 }
 
@@ -18,6 +19,7 @@ export const credits: Credit[] = [
     date: 'April - May 2026',
     type: 'musical',
     featured: false,
+    upcoming: true,
   },
   {
     id: 'rocky-horror',

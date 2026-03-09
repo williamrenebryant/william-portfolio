@@ -10,6 +10,7 @@ import { useState, useRef } from 'react'
 export default function ResumePage() {
   const featuredCredits = credits.filter((credit) => credit.featured)
   const printResumeCredits = credits.slice(0, 12) // Top 12 for downloadable resume
+  const hasUpcoming = credits.some((credit) => credit.upcoming)
   const [expandedSection, setExpandedSection] = useState<string | null>(null)
   const [scrollOffset, setScrollOffset] = useState(0)
   const scrollRef = useRef<HTMLDivElement>(null)
@@ -237,7 +238,9 @@ export default function ResumePage() {
                       credit.featured ? 'font-semibold' : ''
                     }`}
                   >
-                    <td className="py-3 px-4 text-text-primary">{credit.title}</td>
+                    <td className="py-3 px-4 text-text-primary">
+                      {credit.title}{credit.upcoming && <span className="text-accent-orange">*</span>}
+                    </td>
                     <td className="py-3 px-4 text-text-muted">{credit.role}</td>
                     <td className="py-3 px-4 text-text-muted">{credit.company}</td>
                     <td className="py-3 px-4 text-text-muted whitespace-nowrap">{credit.date}</td>
@@ -245,6 +248,11 @@ export default function ResumePage() {
                 ))}
               </tbody>
             </table>
+            {hasUpcoming && (
+              <p className="text-text-muted text-sm mt-3 px-4">
+                <span className="text-accent-orange">*</span> Upcoming production
+              </p>
+            )}
           </div>
 
           {/* Mobile List Layout */}
@@ -270,7 +278,7 @@ export default function ResumePage() {
                       className="font-normal m-0"
                       style={{ fontSize: 'clamp(18px, 3vw, 24px)', color: 'var(--color-text)' }}
                     >
-                      {credit.title}
+                      {credit.title}{credit.upcoming && <span className="text-accent-orange">*</span>}
                     </h3>
                     <span
                       className="block text-[13px] tracking-[2px] uppercase font-normal mt-1"
@@ -288,6 +296,11 @@ export default function ResumePage() {
                 </span>
               </div>
             ))}
+            {hasUpcoming && (
+              <p className="text-text-muted text-sm mt-3">
+                <span className="text-accent-orange">*</span> Upcoming production
+              </p>
+            )}
           </div>
         </section>
 
@@ -459,13 +472,18 @@ export default function ResumePage() {
                 <tbody>
                   {printResumeCredits.map((credit) => (
                     <tr key={credit.id} className="border-b border-gray-300">
-                      <td className="py-1 font-semibold align-top w-1/3">{credit.title}</td>
+                      <td className="py-1 font-semibold align-top w-1/3">
+                        {credit.title}{credit.upcoming && '*'}
+                      </td>
                       <td className="py-1 align-top w-1/4">{credit.role}</td>
                       <td className="py-1 text-right align-top w-5/12">{credit.company}</td>
                     </tr>
                   ))}
                 </tbody>
               </table>
+              {printResumeCredits.some((c) => c.upcoming) && (
+                <p className="text-xs text-gray-500 mt-1">* Upcoming production</p>
+              )}
             </div>
 
             {/* Training */}
