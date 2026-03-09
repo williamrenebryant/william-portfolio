@@ -13,6 +13,23 @@ export default function ResumePage() {
   const [expandedSection, setExpandedSection] = useState<string | null>(null)
   const [scrollOffset, setScrollOffset] = useState(0)
   const scrollRef = useRef<HTMLDivElement>(null)
+  const [paperSize, setPaperSize] = useState<'letter' | '8x10'>('8x10')
+
+  const printWithSize = () => {
+    const styleId = 'print-page-size'
+    let styleEl = document.getElementById(styleId)
+    if (!styleEl) {
+      styleEl = document.createElement('style')
+      styleEl.id = styleId
+      document.head.appendChild(styleEl)
+    }
+    if (paperSize === '8x10') {
+      styleEl.textContent = '@page { size: 8in 10in; margin: 0.5in; }'
+    } else {
+      styleEl.textContent = '@page { size: letter; margin: 0.75in; }'
+    }
+    window.print()
+  }
 
   const toggleSection = (section: string) => {
     setExpandedSection(expandedSection === section ? null : section)
@@ -60,9 +77,32 @@ export default function ResumePage() {
           </div>
 
           {/* Download Resume Button */}
-          <div className="mt-6 md:mt-8">
+          <div className="mt-6 md:mt-8 flex flex-col items-center gap-3">
+            <div className="flex items-center gap-3">
+              <label className="text-text-muted text-sm">Paper size:</label>
+              <button
+                onClick={() => setPaperSize('8x10')}
+                className={`px-3 py-1.5 text-sm rounded-lg border transition-colors ${
+                  paperSize === '8x10'
+                    ? 'border-accent-orange text-text-primary bg-accent-orange/20'
+                    : 'border-[rgba(232,224,214,0.2)] text-text-muted hover:border-[rgba(232,224,214,0.5)]'
+                }`}
+              >
+                8×10
+              </button>
+              <button
+                onClick={() => setPaperSize('letter')}
+                className={`px-3 py-1.5 text-sm rounded-lg border transition-colors ${
+                  paperSize === 'letter'
+                    ? 'border-accent-orange text-text-primary bg-accent-orange/20'
+                    : 'border-[rgba(232,224,214,0.2)] text-text-muted hover:border-[rgba(232,224,214,0.5)]'
+                }`}
+              >
+                8.5×11
+              </button>
+            </div>
             <button
-              onClick={() => window.print()}
+              onClick={printWithSize}
               className="inline-block px-6 py-2 md:px-8 md:py-3 border border-[rgba(232,224,214,0.2)] text-text-primary font-normal rounded-lg hover:border-[rgba(232,224,214,0.5)] hover:bg-[rgba(232,224,214,0.05)] transition-colors text-sm md:text-base"
             >
               Download Resume (PDF)
@@ -451,9 +491,32 @@ export default function ResumePage() {
           </div>
 
           {/* Print Button */}
-          <div className="text-center mt-8">
+          <div className="text-center mt-8 flex flex-col items-center gap-3">
+            <div className="flex items-center gap-3">
+              <label className="text-text-muted text-sm">Paper size:</label>
+              <button
+                onClick={() => setPaperSize('8x10')}
+                className={`px-3 py-1.5 text-sm rounded-lg border transition-colors ${
+                  paperSize === '8x10'
+                    ? 'border-accent-orange text-text-primary bg-accent-orange/20'
+                    : 'border-[rgba(232,224,214,0.2)] text-text-muted hover:border-[rgba(232,224,214,0.5)]'
+                }`}
+              >
+                8×10
+              </button>
+              <button
+                onClick={() => setPaperSize('letter')}
+                className={`px-3 py-1.5 text-sm rounded-lg border transition-colors ${
+                  paperSize === 'letter'
+                    ? 'border-accent-orange text-text-primary bg-accent-orange/20'
+                    : 'border-[rgba(232,224,214,0.2)] text-text-muted hover:border-[rgba(232,224,214,0.5)]'
+                }`}
+              >
+                8.5×11
+              </button>
+            </div>
             <button
-              onClick={() => window.print()}
+              onClick={printWithSize}
               className="px-8 py-3 border border-[rgba(232,224,214,0.2)] text-text-primary font-normal rounded-lg hover:border-[rgba(232,224,214,0.5)] hover:bg-[rgba(232,224,214,0.05)] transition-colors"
             >
               Print / Save as PDF

@@ -541,8 +541,8 @@ body {
 @media print {
   /* Set page margins */
   @page {
-    margin: 0.75in;
-    size: letter;
+    margin: 0.5in;
+    size: 8in 10in;
   }
 
   /* Reset and constrain body */
